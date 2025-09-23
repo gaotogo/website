@@ -1,0 +1,18 @@
+---
+import Section from "../Section.astro";
+import H1 from "../H1.astro";
+import Bubble from "../Bubble.astro";
+import FAQs from "../FAQs.jsx"
+
+---
+
+<Section additionalClasses="pt-10 lg:pt-10">
+    <div class="flex flex-col space-y-15 lg:space-y-30 items-center">
+        <div class="w-fit relative">
+                <H1 text="Got questions?" additionalClasses="text-emerald text-[56px]" />
+             <Bubble text="We’ve got the answers." additionalClasses="absolute right-[-24px] bottom-[-40px]"/>
+        </div>
+        {/* FAQS */}
+        <FAQs client:visible />
+    </div>
+</Section>

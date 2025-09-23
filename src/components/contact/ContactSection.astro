@@ -1,0 +1,36 @@
+---
+import Section from "../Section.astro"
+import SectionHeading from "../SectionHeading.astro"
+import ContactForm from "./ContactForm.astro"
+---
+
+<Section  additionalClasses="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-24 lg:justify-between pb-10 lg:pb-12">
+<div class="flex flex-col space-y-10 lag:space-y-15">
+    <p class="text-[18px] lg:text-[26px] lg:tex-xl text-charcoal/80">We’re here to help — whether you want to ask about an order, check ingredients, give feedback, or just say hi.</p>
+    <div class="flex flex-col space-y-8">
+        <div class="flex flex-col space-y-1 ">
+            <span class="mb-1 block font-semibold">Find Us</span>
+            <span class="block text-charcoal/80">82 Shoreditch High Street <br> London, E1 6JJ, United Kingdom</span>
+            <a href="#" class="text-[14px] text-emerald hover:text-emerald/90">View on Google Maps</a>
+        </div>
+        <div class="flex flex-col space-y-1 ">
+            <span class="mb-1 block font-semibold">Opening Hours</span>
+            <span class="block text-charcoal/80">Monday - Friday: 11:00 AM - 8:00 PM<br>Saturday: 12:00 PM - 6:00 PM<br>Sunday: Closed</span>
+        </div>
+        <div class="flex flex-col space-y-1 ">
+            <span class="mb-1 block font-semibold">Call Us</span>
+            <a href="tel:+442079460123" class="text-charcoal/80 hover:text-charcoal">+44 20 7946 0123</a>
+            <span class="block text-[14px] text-charcoal/60">For quick questions or same-day updates.</span>
+        </div>
+        <div class="flex flex-col space-y-1 ">
+            <span class="mb-1 block font-semibold">Email Us</span>
+            <a href="mailto:hello@gaotogo.com" class="text-charcoal/80 hover:text-charcoal">hello@gaotogo.com</a>
+            <span class="block text-[14px] text-charcoal/60">We aim to reply within 24 hours</span>
+        </div>
+        
+    </div>
+</div>
+<div>
+    <ContactForm/>     
+</div>
+</Section>

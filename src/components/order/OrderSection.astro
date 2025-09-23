@@ -1,0 +1,39 @@
+---
+import Section from "../Section.astro";
+import Button from "../Button.astro";
+
+---
+
+<Section>
+    <div class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5">
+        <div class="flex flex-col space-y-5">
+            {/*Card 1 */}
+            <div class="flex items-center h-full rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 border-2 border-charcoal">
+                <div class="flex flex-col space-y-4  ">
+                    <h4 class="text-[24px] font-semibold tracking-wide">Order Now, Pick Up Later</h4>
+                    <p class="text-[18px] text-charcoal/80">Pick your meal online, and we’ll have it ready when you arrive. No queues, no delays.</p>
+                    <Button ctaText="Click & Collect" hoverBackgroundColor="hover:bg-charcoal" hoverTextColor="hover:text-rice" mobilePaddingY="py-4" additionalStyles="mt-2 lg:w-fit text-center text-[24px] "/>
+                </div>
+            </div>
+            {/*Card 2 */}
+            <div class="flex items-center h-full rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 border-2 border-charcoal">
+                <div class="flex flex-col space-y-4  ">
+                    <h4 class="text-[24px] font-semibold tracking-wide">Get It Delivered</h4>
+                    <p class="text-[18px] text-charcoal/80">Stay where you are — we’ll bring your order straight to you, hot, fresh, and flavourfull.</p>
+                    <Button ctaText="Order for Delivery" hoverBackgroundColor="hover:bg-charcoal" hoverTextColor="hover:text-rice" mobilePaddingY="py-4" additionalStyles="mt-2 lg:w-fit text-center text-[24px]"/>
+                </div>
+            </div>
+        </div>
+        {/* QR Card */}
+         <div class="rounded-[24px] lg:rounded-[32px] bg-emerald  overflow-hidden ">
+                <div class="p-6 lg:p-8 bg-charcoal">
+                    <h4 class="text-rice text-[24px] font-semibold tracking-wide">In-Store QR Ordering</h4>
+                    <p class="mt-4 text-[18px] text-rice/80">Already in the shop? Just scan the QR code and order.</p>
+                </div>
+                <div class="flex flex-col items-center space-y-2 p-6 h-full">
+                    <img src="/QR.svg" alt="Gao To Go Order Page QR Code" class="w-[290px] h-[290px]">
+                    <span class="text-center text-[24px] font-semibold tracking-wide text-rice">Scan To Order</span>
+                </div>
+            </div>
+    </div>
+</Section>

@@ -2,11 +2,13 @@
 interface Props {
     text: string;
     margin?:string;
+    darkMode?:boolean;
     additionalClasses?: string;
 }
-const { text, margin="mb-4 lg:mb-5", additionalClasses="" } = Astro.props;
+const { text, margin="mb-4 lg:mb-5", darkMode = false, additionalClasses="" } = Astro.props;
+const style = darkMode ? "text-rice/80 border-emerald bg-charcoal shadow-[2px_2px_#00a36c] lg:shadow-[3px_3px_#00a36c]" : "text-charcoal/80 border-charcoal shadow-[2px_2px_#282b31] lg:shadow-[3px_3px_#282b31]"; 
 ---
 
 <div class={`${margin} ${additionalClasses}`}>
-    <span class=" font-secondary font-medium tracking-wide text-[12px] lg:text-[16px] text-charcoal/80 px-3 py-[6px] lg:px-4 lg:py-2 border-[1px] lg:border-[3px] border-charcoal shadow-[2px_2px_#282b31] lg:shadow-[3px_3px_#282b31] rounded-[12px]">{text}</span>
+    <span class={` ${style} font-secondary font-medium tracking-wide text-[12px] lg:text-[16px] px-3 py-[6px] lg:px-4 lg:py-2 border-[1px] lg:border-[3px] rounded-[12px]`}>{text}</span>
 </div>

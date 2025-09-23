@@ -3,7 +3,6 @@ interface props {
     ctaText?: string;
     link?: string;
     hoverScale?: string;
-    additionalStyles?: string;
     mobilePaddingX?: string;
     desktopPaddingX?: string;
     mobilePaddingY?: string;
@@ -12,12 +11,10 @@ interface props {
     hoverBackgroundColor?: string;
     textColor?: string;
     hoverTextColor?: string;
-
-
-
+    additionalStyles?: string;
 }
 
-const { ctaText="Order Now",link="#",hoverScale = "hover:scale-100", additionalStyles = "", mobilePaddingX = "px-3", desktopPaddingX = "lg:px-6", mobilePaddingY = "py-[6px]", desktopPaddingY = "lg:py-3", backgroundColor = "bg-emerald", hoverBackgroundColor = "hover:bg-rice", textColor = "text-rice", hoverTextColor = "hover:text-emerald" } = Astro.props;
+const { ctaText="Order Now",link="#",hoverScale = "hover:scale-100",  mobilePaddingX = "px-3", desktopPaddingX = "lg:px-6", mobilePaddingY = "py-[6px]", desktopPaddingY = "lg:py-3", backgroundColor = "bg-emerald", hoverBackgroundColor = "hover:bg-rice", textColor = "text-rice", hoverTextColor = "hover:text-emerald", additionalStyles="" } = Astro.props;
 
 ---
 

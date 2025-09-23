@@ -6,7 +6,7 @@ const inputClasses = "mt-2 p-3 border-1 border-charcoal rounded-[12px]"
 const divClasses = "flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:space-x-6"
 ---
 
-<form  class="flex flex-col space-y-6 w-full p-7 lg:p-10 border-[1px] lg:border-[3px] border-charcoal shadow-[2px_2px_#282b31] lg:shadow-[3px_3px_#282b31] rounded-[40px]">
+<form  class="flex flex-col space-y-6 w-full p-7 lg:p-10  border-[1px] lg:border-[3px] border-charcoal shadow-[2px_2px_#282b31] lg:shadow-[3px_3px_#282b31] rounded-[40px]">
       <!-- <div class={divClasses}>
         <label class={labelClasses} for="first_name">
         First Name
@@ -31,27 +31,23 @@ const divClasses = "flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:space-x-
         <input class={inputClasses} type="tel" id="phone_number" name="phone_number" required />
       </label>
       </div>
+     
 
-      <label class={labelClasses} for="applied_role">Role you’re interested In
+      <label class={labelClasses} for="applied_role">Tell us why you're here
         <select class={`${inputClasses} cursor-pointer`} name="applied_role" id="applied_role" required>
           <option value="" selected disabled>Select one...</option>
-          <option value="volvo">Receptionist</option>
-          <option value="saab">Account Manager</option>
-          <option value="opel">Delivery Boy</option>
-          <option value="audi">Sweeper</option>
+          <option value="volvo">I have a question</option>
+          <option value="saab">I want to complain</option>
+          <option value="opel">I have feedback</option>
+          <option value="audi">Other</option>
         </select>
       </label>
-      
-      <label class={labelClasses} for="uploaded_file">
-        Upload your CV (jpg, png, pdf, doc)
-        <input class={`${inputClasses}  file:px-3 file:py-[6px] file:border-1 file:border-charcoal file:mr-2 text-charcoal/70 file:text-charcoal file:font-medium file:rounded-[8px] file:cursor-pointer px-[1px] py-[1px] border-none border-charcoal/70`} type="file" id="uploaded_file" name="uploaded_file" accept="image/*,.pdf,.doc" required />
-      </label>
 
-      <!-- <label class={labelClasses} for="message">
+      <label class={labelClasses} for="message">
         Message
-        <textarea class={inputClasses} id="message" name="message" required />
-      </label> -->
-      <button class=" mt-1 px-6 lg:px-6 py-3 lg:py-3 bg-emerald hover:bg-charcoal text-rice text-[16px] lg:text-[20px] font-primary tracking-wide rounded-full transition delay-50 duration-300 ease-in-out cursor-pointer">Apply Now</button>
+        <textarea class={`${inputClasses} h-30`} id="message" name="message" required />
+      </label>
+      <button class="mt-1 px-6 lg:px-6 py-3 lg:py-3 bg-emerald hover:bg-charcoal text-rice text-[16px] lg:text-[20px] font-primary tracking-wide rounded-full transition delay-50 duration-300 ease-in-out cursor-pointer">Submit</button>
 
        
     </form>
