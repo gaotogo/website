@@ -10,8 +10,8 @@
         const menuPreviewImage = document.querySelector("menu-preview-image")
         const menuOverlay = document.querySelector(".menu-overlay");
         const menuContent = document.querySelector(".menu-content");
-        const menuLinks = document.querySelector(".menu-links");
         const bodyElement = document.body;
+
 
         let isOpen = false;
         let isAnimating = false;
@@ -28,14 +28,6 @@
 
             bodyElement.style.overflow = "hidden";
 
-            gsap.to(container, {
-                rotation:10,
-                x:300,
-                y:450,
-                scale:1.5,
-                duration:1.25,
-                ease:"power4.inOut",
-            });
 
             gsap.to(menuContent, {
                 rotation:0,
@@ -44,7 +36,7 @@
                 scale:1,
                 opacity:1,
                 duration:1.25,
-                ease:"power4.inOut",
+                ease:"power5.inOut",
             });
 
             gsap.to([".main-link a", ".sec-link a"], {
@@ -79,15 +71,6 @@
              if(isAnimating || !isOpen) return;
             isAnimating = true;
 
-            gsap.to(container, {
-                rotation:0,
-                x:0,
-                y:0,
-                scale:1,
-                duration:.8,
-                ease:"power4.inOut",
-            });
-
             gsap.to(menuContent, {
                 rotation:-15,
                 x:-100,
@@ -106,8 +89,7 @@
                     bodyElement.style.overflow = "auto";
                     isOpen = false;
                     isAnimating = false;
-                    gsap.set([".main-link a", ".sec-link a"], {y:"120%"});
-                    resetPreviewImage();
+                    gsap.set([".main-link a", ".sec-link a"], {y:"120%", opcacity:0.25});
                 },
             });
 

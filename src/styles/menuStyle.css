@@ -18,6 +18,9 @@ body {
     color: var(--color-rice)
 }
 
+.my-container{
+    width: 100svw;
+}
 
 .main-link a::after, .sec-link a::after, .menu-footer a::after {
     position: absolute;
@@ -37,13 +40,6 @@ body {
     transform-origin: left;
 }
 
-.my-container{
-    position: relative;
-    width: 100svw;
-    height: 100%;
-    will-change: transform;
-    transform-origin: right top;
-}
 
 .main-link a, .sec-link a {
     transform: translateY(120%);
