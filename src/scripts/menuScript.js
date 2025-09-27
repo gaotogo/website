@@ -36,7 +36,7 @@
                 scale:1,
                 opacity:1,
                 duration:1.25,
-                ease:"power4.inOut",
+                ease:"power3.inOut",
             });
 
             gsap.to([".main-link a", ".sec-link a"], {
