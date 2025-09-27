@@ -39,7 +39,7 @@ body {
 
 .my-container{
     position: relative;
-    width: 100%;
+    width: 100svw;
     height: 100%;
     will-change: transform;
     transform-origin: right top;

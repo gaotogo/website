@@ -26,7 +26,7 @@
             if(isAnimating || isOpen) return;
             isAnimating = true;
 
-            // bodyElement.style.overflow = "hidden";
+            bodyElement.style.overflow = "hidden";
 
             gsap.to(container, {
                 rotation:10,
@@ -103,7 +103,7 @@
                 duration:1.25,
                 ease:"power4.out",
                 onComplete:() => {
-                    // bodyElement.style.overflow = "auto";
+                    bodyElement.style.overflow = "auto";
                     isOpen = false;
                     isAnimating = false;
                     gsap.set([".main-link a", ".sec-link a"], {y:"120%"});
