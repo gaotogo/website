@@ -2,20 +2,123 @@
 import Button from './Button.astro';
 import Nav from './Nav.astro';
 import MobileMenu from "./MobileMenu.astro"
+import Image from 'astro/components/Image.astro';
+import menuImage from "../images/team.jpg"
+
+
+const policyLinks = [
+    { text: "Terms & Conditions", href: "#" },
+    { text: "Privacy", href: "#" },
+    { text: "Cookies Policy", href: "#" },
+]
 
 ---
 
-
-<header class="bg-charcoal mx-4 mt-4 lg:mt-8 py-3 lg:py-5 px-5 lg:px-8 lg:max-w-300 box-border lg:mx-auto inset-x-0 rounded-full z-50 fixed">
-    <div class="flex items-center justify-between">
-        <a href="/" class="pt-[2px] lg:pt-1">
-            <img src="/logo.svg" alt="Logo" class="h-7 lg:h-11" />
-        </a>
-        <div class="flex flex-row space-x-4 lg:space-x-5 items-center">
-            <Nav/>
-            <Button hoverScale="hover:scale-102"/>
-            <MobileMenu />
+<header>
+    
+    <div class="bg-charcoal mx-4 mt-4 lg:mt-8 py-3 lg:py-5 px-5 lg:px-8 lg:max-w-300 box-border lg:mx-auto inset-x-0 rounded-full z-50 fixed">
+        <div class="flex items-center justify-between">
+            <a href="/" class="pt-[2px] lg:pt-1">
+                <img src="/logo.svg" alt="Logo" class="h-7 lg:h-11" />
+            </a>
+            <div class="flex flex-row space-x-4 lg:space-x-5 items-center">
+                <Nav/>
+                <Button hoverScale="hover:scale-102"/>
+                <!-- <MobileMenu /> -->
+                 <div class="open-menu">
+                    <a href="#" class="">
+                        <img src="/menu-closed.svg" alt="menu-hamburger-closed" class="w-[26px] lg:w-[34px] h-[26px] lg:h-[34px]" />
+                    </a>
+                 </div>
+            </div>        
         </div>
-        
     </div>
+
+
+    {/* Menu Overlay */}
+    <div class="menu-overlay fixed w-[100vw] h-[100svh] text-rice bg-charcoal z-90 ">
+            <div class="close-menu hidden lg:block  cursor-pointer z-100 absolute top-10 right-20">
+                <img src="/icons/cross.svg" alt="" class="h-10">
+            </div>
+            
+        {/* Menu Content */}
+        <div class="menu-content p-8 pt-12 lg:px-20 lg:pt-10 lg:pb-6 relative w-full h-full flex flex-col  lg:gap-10 justify-between lg:justify-end items-center origin-bottom-left">
+            <div class="lg:hidden w-full flex justify-between">
+                <div>
+                    <a href="/" class="pt-[2px] lg:pt-1">
+                        <img src="/logo-secondary.svg" alt="Logo" class="h-12 lg:h-13" />
+                    </a>
+                </div>
+                <div class="close-menu cursor-pointer">
+                    <img src="/icons/cross.svg" alt="" class="h-10">
+                </div>
+            </div>
+            {/* Menu Items */}
+            <div class="w-full lg:h-full lg:flex lg:flex-row items-center">
+                {/* Image */} {/* col lg */}
+                <div class="flex-4 hidden h-full lg:flex justify-center items-center">
+                    <div class="menu-preview-img relative w-[80%] h-[80%] overflow-hidden"> 
+                        <Image src={menuImage} alt="" format="avif" class="object-cover object-center  w-full h-full rounded-[24px] lg:rounded-[40px] absolute will-change-[transform, opacity]" />
+                    </div>
+                </div>
+                {/* Links */} {/* col sm */}
+                <div class="flex-2 flex flex-col gap-16">
+                    <div class="flex flex-col gap-8">
+                        <div class="menu-links flex flex-col  gap-6 text-6xl lg:text-6xl  font-primary tracking-wider">
+                            <div class="main-link"><a href="#" >Menu</a></div>
+                            <div class="main-link"><a href="#" >Locations</a></div>
+                            <div class="main-link"><a href="/about" >Our Story</a></div>
+                            <div class="main-link"><a href="#" >Nutrition</a></div>
+                        
+                        </div>
+                        <div class="flex flex-col gap-4 text-[20px]  lg:text-[20px] text-rice/60">
+                            <div class="sec-link"><a href="/contact/#FAQs" >FAQs</a></div>
+                            <div class="sec-link"><a href="/contact" >Contact</a></div>
+                            <div class="sec-link"><a href="/careers" >Careers</a></div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                         
+                          <Button ctaText="Click & Collect"  hoverBackgroundColor="hover:bg-rice" hoverTextColor="hover:text-charcoal" mobilePaddingY="py-5" additionalStyles="mt-2 lg:w-fit text-center text-[24px] px-8"/>
+                    </div>
+                </div>
+            </div>
+
+            {/* Menu Footer */}
+              <div class="w-full">
+                {/** for the policies part - DESKTOP */}
+                <div class="hidden lg:block border-t-2 border-rice/10">
+                    <div class="flex justify-between max-w-300 pt-4 mx-auto">
+                        <span class="font-secondary text-[16px] uppercase">© 2025 GAO TO GO</span>
+                        <ul class="flex space-x-6">
+                            {policyLinks.map(item => (
+                                <li class="font-secondary text-[16px] hover:text-rice/80"><a href={item.href} class="">{item.text}</a></li>
+                            ))}
+                        </ul>
+                        <span class="font-secondary text-[16px]">creative by 
+                            <a href="#" class="underline hover:text-emerald">mirza</a>
+                        </span>
+                    </div>
+                </div>
+
+                {/** for the policies part - MOBILE */}
+                <div class="flex flex-col items-center gap-4 border-t-2 pt-8 border-rice/10 lg:hidden">
+                    
+                    <div class="flex gap-4">
+                        
+                        <span class="font-secondary text-[16px] uppercase">© 2025 GAO TO GO</span>
+                        <span class="font-secondary text-[16px]">|</span>
+                        <span class="font-secondary text-[16px]">creative by 
+                            <a href="#" class="underline text-emerald">mirza</a>
+                        </span>
+                    </div>
+                </div>
+              </div>
+   
+        </div>
+    </div>
+    
 </header>
+
+<script src="../scripts/menuScript.js"></script>

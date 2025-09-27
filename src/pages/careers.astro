@@ -15,29 +15,28 @@ import TakingAction from '../components/careers/TakingAction.astro'
 ---
 
 <Layout title="Careers | Gạo To Go">
-	<main>
-        <section class="pt-28 lg:pt-50 pb-10 lg:pb-32">
-            <div class="pb-6 lg:pb-22">
-                <div class=" flex flex-col items-center w-fit px-5 lg:px-0 mx-auto relative">
-                    
-                    <H1 text="Join the team" additionalClasses=" text-emerald text-[56px] lg:text-[152px] " /> 
-                    <Bubble text="that keeps it fast, fresh, and full of flavour." margin='' additionalClasses='hidden lg:block absolute bottom-0 right-[-60px]'/>
-                    <p class="lg:hidden font-secondary font-medium tracking-wide text-[12px] text-charcoal/80 mt-[-4px]">that keeps it fast, fresh, and full of flavour.</p>
-                    
-                </div>
+	
+    <section class="pt-28 lg:pt-50 pb-10 lg:pb-32">
+        <div class="pb-6 lg:pb-22">
+            <div class=" flex flex-col items-center w-fit px-5 lg:px-0 mx-auto relative">
+                
+                <H1 text="Join the team" additionalClasses=" text-emerald text-[56px] lg:text-[152px] " /> 
+                <Bubble text="that keeps it fast, fresh, and full of flavour." margin='' additionalClasses='hidden lg:block absolute bottom-0 right-[-60px]'/>
+                <p class="lg:hidden font-secondary font-medium tracking-wide text-[12px] text-charcoal/80 mt-[-4px]">that keeps it fast, fresh, and full of flavour.</p>
+                
             </div>
-        <div class="lg:max-w-300 mx-auto">
-            <Image src={teamImage} alt="Gạo To Go Team Group Photo" width={1200} format='avif' class="object-cover lg:rounded-[40px] aspect-video"/>
         </div>
-        <div class="flex flex-col space-y-4 lg:space-y-6 lg:max-w-196 mx-auto mt-6 lg:mt-32 px-5 lg:px-0">
-            <BigPara text='At GAO TO GO, we move quickly, cook cleanly, and serve with purpose.'/>
-            <BigPara text='If you’re passionate about food, hospitality, or just love working in a fast-paced, friendly environment — we’d love to hear from you.'/>
-        </div>
-        </section>
+    <div class="lg:max-w-300 mx-auto">
+        <Image src={teamImage} alt="Gạo To Go Team Group Photo" width={1200} format='avif' class="object-cover lg:rounded-[40px] aspect-video"/>
+    </div>
+    <div class="flex flex-col space-y-4 lg:space-y-6 lg:max-w-196 mx-auto mt-6 lg:mt-32 px-5 lg:px-0">
+        <BigPara text='At GAO TO GO, we move quickly, cook cleanly, and serve with purpose.'/>
+        <BigPara text='If you’re passionate about food, hospitality, or just love working in a fast-paced, friendly environment — we’d love to hear from you.'/>
+    </div>
+    </section>
 
-        <ThePitch/>
-        <Ticker topBanner="lg:hidden"/>
-        <TakingAction/>
+    <ThePitch/>
+    <Ticker topBanner="lg:hidden"/>
+    <TakingAction/>
 
-	</main>
 </Layout>

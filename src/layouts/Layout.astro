@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/menuStyle.css';
 
 interface Props {
     title: string;
@@ -20,10 +21,17 @@ const { title, description= "Fast, fresh Vietnamese meals made for busy lives. O
         <meta name="generator" content={Astro.generator} />
         <meta property="og:image" content={image} />
         <title>{title}</title>
+
     </head>
+
     <body class="bg-rice font-secondary">
         <Header />
+        <main class="my-container">
         <slot />
+        </main>
         <Footer />
     </body>
+
+    <script src="../scripts/menuScript.js"></script>
+
 </html>
