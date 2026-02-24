@@ -4,9 +4,9 @@ import heroImage from '../images/hero-image.jpg';
 const optimizedHeroImage = await getImage({src: heroImage, width: 1920, format: 'avif', priority: true});
 ---
 <section 
-class={`flex flex-col justify-end items-center px-5 pb-8 lg:pb-16 bg-cover bg-center w-full h-svh lg:h-[418px] lg:rounded-b-[80px] relative overflow-hidden`}
+class={`flex flex-col justify-end items-center px-5 pb-8 lg:pb-16 bg-cover bg-center w-full h-svh lg:h-[520px] lg:rounded-b-[80px] relative overflow-hidden`}
 style={`background-image: url('${optimizedHeroImage.src}');`}>
-    <div class="bg-charcoal/10 w-full h-svh lg:h-[418px] absolute top-0"></div>
+    <div class="bg-charcoal/10 w-full h-svh lg:h-[520px] absolute top-0"></div>
     <div class="lg:max-w-300 z-5">
         <!-- <h1 class="text-[40px] md:text-[102px] text-rice leading-[1.3] font-primary tracking-wide text-shadow-md text-left">Vietnamese street food, reimagined</h1> -->
         <h1 class="text-transparent text-stroked text-7xl md:text-[102px] leading-[1.3] font-primary tracking-wide text-left">Vietnamese street food, reimagined</h1>
